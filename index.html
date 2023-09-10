@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Styles/main.css">
+
+
+</head>
+
+<body>
+  <section class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#main-page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#personal-info">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="profile">
+        <a class="navbar-brand" href="#">
+          <span id="profile-text">Ravid Davda</span>
+          <img src="./Images/profileface.png" alt="Ravid Davda" width="40" height="40">
+        </a>
+      </div>
+    </nav>
+  </section>
+
+  <section id="main-page">
+    <div class="container-fluid intro">
+      <img src="https://fontmeme.com/permalink/230721/afc448355dd7b3fc9970fafbe6d42d11.png">
+      <img id="blink-c" src="https://fontmeme.com/permalink/230721/af2a83cf11a5dc3cdbde6b746d076772.png">
+      <img src="https://fontmeme.com/permalink/230721/285022bf9cee9e69a3e484f475fe53c8.png">
+      <p>
+        Welcome to my site! <br>
+        Here you will find all of my project about HTML and programming languages. <br>
+        Enjoy your visit!
+      </p>
+    </div>
+  </section>
+
+  <div id="border"></div>
+  <section class="projects">
+    <div class="container-fluid d-flex justify-content-center flex-wrap gap-5">
+      <div>
+        <img src="./Images/html.png" alt="HTML" title="HTML">
+      </div>
+      <div>
+        <img src="./Images/css.png" alt="CSS" title="CSS">
+      </div>
+      <div>
+        <img src="./Images/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+      </div>
+      <div>
+        <img src="./Images/sass.png" alt="SASS" title="Sass">
+      </div>
+      <div>
+        <img src="./Images/javascript.webp" alt="Java Script" title="JavaScript">
+      </div>
+    </div>
+  </section>
+
+  <div id="border"></div>
+  <section id="personal-info" class="personal-info">
+    <div class="container-fluid">
+      <!-- <img src="./Images/profileface.png" alt="Ravid Davda"> -->
+      <h2>ABOUT ME</h2>
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+      <span class="dot">.</span>
+      <p>
+        I'm Ravid Davda from Be'er Sheva, FULLSTACK student. <br>
+        My hobbies are playing music and video games. <br>
+        I've always been intrested in the computing and programming world.
+      </p>
+      <a href="רביד דבדה.pdf" target="_blank">Resume
+        <img src="./Images/linkicon.png" class="link" alt="Link Image">
+      </a>
+    </div>
+  </section>
+
+  <div id="border"></div>
+  <section class="container-design" id="gallery">
+    <div>
+      <h3>PROJECTS.</h3>
+      <span id="blink">|</span>
+      <section class="card-design">
+
+        <!-- experiment! -->
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/hereandnowth.png" class="img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Here & Now!</h5>
+            <p class="card-text">This project was made using HTML & CSS.</p>
+            <a href="hereANDnowPage.html" class="btn">Link to Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/coffeeth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Coffee</h5>
+            <p class="card-text">This project was made using HTML & CSS.</p>
+            <a href="coffeePage.html" class="btn">Link to project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class=" card-image-container">
+            <img src="./Images/path15th.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Forward</h5>
+            <p class="card-text">This project was made using HTML, CSS & Bootstrap.</p>
+            <a href="./forwardPage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/spaceth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Space</h5>
+            <p class="card-text">This project was made with HTML & CSS.</p>
+            <a href="./spacePage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/collectionth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Collection</h5>
+            <p class="card-text">This project was make using HTML, CSS & Sass.</p>
+            <a href="./collectionPage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/consultationth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Consultation</h5>
+            <p class="card-text">This Project was made using HTML & CSS.</p>
+            <a href="consultationPage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/starsth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">To The Stars!</h5>
+            <p class="card-text">This Project was made using HTML & CSS.</p>
+            <a href="starsPage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/museumth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Museum</h5>
+            <p class="card-text">This Project was made using HTML & CSS.</p>
+            <a href="museumPage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/rockpaperscissorsth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Rock Paper Scissors</h5>
+            <p class="card-text">This Project was made using HTML, CSS & JavaScript.</p>
+            <a href="rockPaperScissorsPage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image-container">
+            <img src="./Images/rockpaperscissorsth.png" class="img-fluid card-img-top img-design" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Tic Tac Toe</h5>
+            <p class="card-text">This Project was made using HTML, CSS & JavaScript.</p>
+            <a href="ticTacToePage.html" class="btn">Link To Project</a>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </section>
+
+  <div id="border"></div>
+  <section id="contact">
+    <div class="contact-design">
+      <div id="contact-options-design">
+        <h3>Contact Me:</h3>
+        <div id="contact-options">
+          <div>
+            <img src="./Images/phoneicon.png" alt="Phone Number">
+            <p>052-4307126</p>
+          </div>
+          <div>
+            <img src="./Images/emailicon.png" alt="Email">
+            <p>ravid521@gmail.com</p>
+          </div>
+          <div>
+            <img src="./Images/linkedin.png" alt="Linkedin">
+            <p dir="ltr">#Ravid_Davda</p>
+          </div>
+        </div>
+      </div>
+      <div id="form-container">
+        <form id="contact-form">
+          <label for="name">Name</label> <br>
+          <input type="text" id="name" placeholder="Ravid Davda"> <br>
+          <label for="email">Mail</label> <br>
+          <input type="email" id="email" placeholder="example@example.com"> <br>
+          <label for="note">Message</label> <br>
+          <input type="textarea" id="note" maxlength="150"> <br>
+          <input type="submit" id="send" value="Send">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="copyright">All rights reserved to Ravid Davda &copy; 2023</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script type="module" src="./Script/index.js"></script>
+</body>
+
+</html>

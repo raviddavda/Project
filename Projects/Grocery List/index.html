@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery List</title>
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Grocery List 🥦🍌</h1>
+    <p>Add grocery items to a list to keep track of the items and view total price.</p>
+    <form id="cart">
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" value="1" placeholder="1">
+      </div>
+      <div>
+        <label for="item">Item Name:</label>
+        <input type="text" name="item" id="listItem">
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" step=".01" placeholder="₪">
+      </div>
+      <button id="addBtn">Add</button>
+    </form>
+
+    <div class="items-container">
+      <ul id="list"></ul>
+    </div>
+    <div id="cartInfo">
+      <button id="resetCartBtn">Reset Cart</button>
+      <p class="totalCost">Total Cost: 0₪</p>
+    </div>
+  </div>
+
+  <script type="module" src="./script/index.js"></script>
+</body>
+
+</html>

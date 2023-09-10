@@ -1,0 +1,103 @@
+.container-design div h3 {
+  color: white;
+  font-size: 4rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: inline;
+}
+
+#blink {
+  color: white;
+  font-size: 4rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  @include blink-animation
+}
+
+.container-design {
+  text-align: center;
+  background-color: #111;
+}
+
+.card-design {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  gap: 60px;
+  padding: 60px;
+}
+
+.card {
+  transition: transform .6s ease-in-out;
+  overflow: hidden;
+  border: 1px solid #ffffff56;
+  background-color: #333;
+  box-shadow: 0 40px 50px -50px white;
+}
+
+.card-body {
+  // transform: translateY(130px);
+  // transition: transform 0.3s ease-in;
+}
+
+.card-body .btn {
+  border: none;
+  color: black;
+  background-color: #18c9e8;
+}
+
+.card-title,
+.card-text {
+  color: #dbdada;
+}
+
+.card-image-container {
+  transition: transform .2s ease-in-out;
+  overflow: hidden;
+  // border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 7px 7px 0 0;
+}
+
+.img-design {
+  width: 100%;
+  height: 100%;
+  transition: transform .12s ease-in-out;
+}
+
+.card:hover .card-body {
+  transform: translateY(0);
+  // transform: rotateY(180deg);
+}
+
+.card:hover .img-design {
+  transform: scale(130%);
+}
+
+@include l-mobile {
+  .card-design {
+    grid-template-columns: auto auto;
+    gap: 70px 0;
+    padding: 30px 0;
+  }
+
+  .card {
+    width: 85%;
+  }
+
+  .container-design {
+    padding: 0;
+  }
+}
+
+@include s-mobile {
+  .card-design {
+    grid-template-columns: auto;
+    gap: 50px;
+  }
+
+  .card {
+    width: 85%;
+  }
+
+  .container-design {
+    padding: 0;
+  }
+}

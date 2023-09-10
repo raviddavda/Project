@@ -1,0 +1,26 @@
+#main-page .intro {
+  padding-top: 80px;
+  text-align: center;
+  background-color: $mainColor;
+  // background-image: url(../Images/pixelCity.gif);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: 0 -600px;
+  box-shadow: 1px 1px 5px black;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: "Retro Computer_DEMO";
+    // @include bounce-animation;
+  }
+
+  #blink-c {
+    @include fast-blink;
+  }
+
+  p {
+    color: white;
+    font-size: 1.5rem;
+  }
+}

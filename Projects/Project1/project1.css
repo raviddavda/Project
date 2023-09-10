@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round";
+}
+
+.project1 {
+  width: 100vw;
+  height: 100vh;
+  background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.forme {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  direction: rtl;
+  text-align: right;
+  font-family: "Varela Round";
+}
+
+h1 {
+  font-size: 9rem;
+  font-family: Satisfy;
+  text-shadow: 5px 10px 20px rgba(0, 0, 0, .5);
+  top: 240px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 20px;
+  text-shadow: 5px 10px 20px rgba(0, 0, 0, .5);
+
+}
+
+.form-name,
+.form-mail {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  font-size: 1.2rem;
+}
+
+.form-name input,
+.form-mail input {
+  font-size: 2rem;
+  width: 470px;
+  height: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  color: rgba(0, 0, 0, .7);
+}
+
+input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+#button {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 22px;
+  height: 46px;
+  display: flex;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#button:hover {
+  animation: shake .5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .forme {
+    flex-direction: column;
+  }
+
+  #button {
+    justify-content: center;
+    width: 96%;
+  }
+}

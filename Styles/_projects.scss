@@ -1,0 +1,16 @@
+.projects {
+  margin: 50px auto;
+  text-align: center;
+  background-color: #111;
+}
+
+.projects img {
+  margin: 10px;
+  width: 58px;
+  height: 50px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.projects img:hover {
+  transform: scale(120%);
+}

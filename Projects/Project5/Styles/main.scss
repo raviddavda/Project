@@ -1,0 +1,185 @@
+@import 'config';
+
+.container {
+  direction: rtl;
+  background-color: $main-color;
+  display: grid;
+  grid-template:
+    'intro intro sunset trees'
+    'intro intro cow sea'
+    'jungle desert surf mountain'
+    'indian monkey form form'
+    'train swamp form form'
+    'kanoo dome form form'
+  ;
+  justify-content: center;
+  padding: 200px 0px;
+  gap: 20px;
+
+  @include mobile {
+    grid-template:
+      'intro intro'
+      'intro intro'
+      'sunset trees'
+      'cow sea'
+      'jungle desert'
+      'surf mountain'
+      'form form'
+      'form form'
+      'form form'
+      'indian monkey'
+      'train swamp'
+      'kanoo dome'
+    ;
+
+    #pic1,
+    #pic2,
+    #pic3,
+    #pic4,
+    #pic5,
+    #pic6,
+    #pic7,
+    #pic8,
+    #pic9,
+    #pic10,
+    #pic11,
+    #pic12,
+    #pic13,
+    #pic14 {
+      width: 99%;
+    }
+  }
+
+  .intro,
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: #020253;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #0EE1DA;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10%;
+
+    h1 {
+      font-size: 3rem;
+
+      @include mobile {
+        width: 80vw;
+      }
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.838);
+
+      @include mobile {
+        width: 80vw;
+      }
+    }
+  }
+}
+
+.form form {
+  background-color: $secondary-color;
+  text-align: right;
+  width: 100%;
+  color: white;
+
+  label {
+    color: #0EE1DA;
+  }
+
+  input {
+    border: none;
+    border-bottom: 5px solid #0EE1DA;
+    height: 50px;
+    background-color: #E5EEFF;
+  }
+
+  #button {
+    background-color: #0EE1DA;
+    color: #011560;
+  }
+
+  textarea {
+    resize: none;
+    border: none;
+    border-bottom: 5px solid #0EE1DA;
+    background-color: #E5EEFF;
+
+  }
+}
+
+
+
+.title {
+  text-align: center;
+  font-size: 1.2rem;
+  width: 480px;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+#pic1 {
+  grid-area: sunset;
+}
+
+#pic2 {
+  grid-area: trees;
+}
+
+#pic3 {
+  grid-area: cow;
+}
+
+#pic4 {
+  grid-area: sea;
+}
+
+#pic5 {
+  grid-area: jungle;
+}
+
+#pic6 {
+  grid-area: desert;
+}
+
+#pic7 {
+  grid-area: surf;
+}
+
+#pic8 {
+  grid-area: mountain;
+}
+
+#pic9 {
+  grid-area: indian;
+}
+
+#pic10 {
+  grid-area: monkey;
+}
+
+#pic11 {
+  grid-area: train;
+}
+
+#pic12 {
+  grid-area: swamp;
+}
+
+#pic13 {
+  grid-area: kanoo;
+}
+
+#pic14 {
+  grid-area: dome;
+}
+
+.form {
+  grid-area: form;
+}

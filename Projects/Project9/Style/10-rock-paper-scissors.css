@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+}
+
+.container {
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.move-icon {
+  height: 50px;
+}
+
+.move-button {
+  background-color: transparent;
+  border: 3px solid white;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.592);
+  transition: opacity .2s ease-in-out;
+}
+
+.move-button:hover {
+  opacity: .5;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.score {
+  margin-top: 60px;
+}
+
+.reset-score-button {
+  background-color: rgb(255, 221, 53);
+  border: none;
+  padding: 8px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.777);
+  transition: opacity, box-shadow .2s ease-in-out;
+}
+
+.reset-score-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.592);
+  opacity: .8;
+}

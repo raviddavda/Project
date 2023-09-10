@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Builder</title>
+  <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-preview">
+      <h1>Page Preview:</h1>
+      <div id="pageDiv"></div>
+    </div>
+    <div id="pageInp">
+      <form>
+        <div id="inputTagContainer">
+          <label for="inputTag">HTML Tag:</label>
+          <select name="inputTag" id="inputTag">
+            <option value="h1">Title &lt;h1&gt;</option>
+            <option value="h2">Secondary Title &lt;h2&gt;</option>
+            <option value="div">Division &lt;div&gt;</option>
+            <option value="p">Paragraph &lt;p&gt;</option>
+          </select>
+        </div>
+        <div>
+          <label for="inputWidth">Element Width:</label>
+          <input type="text" id="inputWidth" placeholder="Pixels">
+        </div>
+        <div>
+          <label for="inputHeight">Element Height:</label>
+          <input type="text" id="inputHeight" placeholder="Pixels">
+        </div>
+        <div>
+          <label for="inputContent">Content:</label>
+          <input type="text" id="inputContent" required>
+        </div>
+        <div>
+          <label for="inputColor">Text Color:</label>
+          <input type="color" id="inputColor">
+        </div>
+        <div>
+          <label for="inputSize">Text Size:</label>
+          <input type="text" id="inputSize">
+          <select name="inputSize" id="inputSizeOption">
+            <option value="px">Pixels 'px'</option>
+            <option value="pt">Points 'pt'</option>
+            <option value="rem">REM 'rem'</option>
+          </select>
+        </div>
+        <div>
+          <label for="">Align Text to center</label>
+          <input type="checkbox" name="textAlign" id="textAlign">
+        </div>
+        <div class="input-buttons-container">
+          <button id="submitBtn">Add</button>
+          <button id="divideBtn">Divider</button>
+          <button id="undoBtn">Undo</button>
+          <button id="saveBtn">Save</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./script/index.js"></script>
+</body>
+
+</html>
