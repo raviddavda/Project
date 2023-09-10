@@ -49,6 +49,8 @@ body {
           backdrop-filter: blur(5px);
   position: fixed;
   width: 100vw;
+  height: -moz-max-content;
+  height: max-content;
   z-index: 5;
 }
 .header a {
@@ -82,6 +84,9 @@ body {
   text-align: center;
   background-color: rgba(0, 255, 255, 0.839);
   box-shadow: 1px 1px 5px black;
+}
+#main-page .intro > div img {
+  width: 50px;
 }
 #main-page .intro h1 {
   font-size: 4rem;
@@ -299,15 +304,17 @@ footer .copyright {
 }
 
 .container-design {
+  width: 100%;
   text-align: center;
   background-color: #111;
 }
 
 .card-design {
+  width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   justify-items: center;
-  gap: 60px;
+  gap: 3rem;
   padding: 60px;
 }
 
@@ -350,31 +357,6 @@ footer .copyright {
   transform: scale(130%);
 }
 
-@media screen and (max-width: 1600px) {
-  .card-design {
-    grid-template-columns: auto auto;
-    gap: 70px 0;
-    padding: 30px 0;
-  }
-  .card {
-    width: 85%;
-  }
-  .container-design {
-    padding: 0;
-  }
-}
-@media screen and (max-width: 992px) {
-  .card-design {
-    grid-template-columns: auto;
-    gap: 50px;
-  }
-  .card {
-    width: 85%;
-  }
-  .container-design {
-    padding: 0;
-  }
-}
 .img-container-design {
   display: flex;
   justify-content: center;
