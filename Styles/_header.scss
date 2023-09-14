@@ -3,44 +3,30 @@
   background-color: #c5c5c584;
   backdrop-filter: blur(5px);
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: max-content;
   z-index: 5;
-  // border-bottom: 1px solid #ffffffc6;
 
   a {
     color: white;
-    // margin-right: 60px;
-    // margin-left: 50px;
   }
 }
 
 .navbar-nav {
   padding-left: 10%;
-  gap: 0 80px;
+  gap: 20px;
 }
 
 .profile {
   display: block;
   position: absolute;
-  right: 10%;
-  top: 14%;
-  font-family: Arial, Helvetica, sans-serif;
-  // border: 1px solid #000;
+  top: 6px;
+  right: 5%;
+  font-family: cursive;
+}
 
-  .navbar-brand {
-    transition: opacity .2s ease-in-out;
-
-    &:hover {
-      opacity: 0.5;
-    }
-
-    // #profile-text {
-    //   transform: translateX(-300px);
-    // }
-
-    img {
-      border-radius: 50%;
-    }
+@include s-mobile {
+  .navbar-nav {
+    padding: 20px;
   }
 }
