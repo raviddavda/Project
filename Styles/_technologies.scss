@@ -1,0 +1,38 @@
+.technologies-container {
+  position: absolute;
+  top: 13.5rem;
+  left: 0;
+  right: 0;
+  width: 1000px;
+  background-color: #888;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 5px black;
+
+  img {
+    width: 68px;
+    height: 60px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+}
+
+@include s-mobile {
+  .technologies-container {
+    width: 500px;
+  }
+}
+
+@include xs-mobile {
+  .technologies-container {
+    width: 400px;
+  }
+}

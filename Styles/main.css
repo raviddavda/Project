@@ -8,7 +8,8 @@ body {
   position: relative;
   height: 100%;
   font-family: "Roboto", sans-serif;
-  background-color: #111;
+  background: rgb(48, 48, 48);
+  background: radial-gradient(circle, rgb(48, 48, 48) 0%, rgb(17, 17, 17) 100%);
 }
 
 #border {
@@ -20,11 +21,12 @@ body {
 }
 
 .header {
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.569);
+  box-shadow: 0px 0px 8px 2px rgb(255, 255, 255);
   background-color: rgba(197, 197, 197, 0.5176470588);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   position: fixed;
+  top: 0;
   width: 100%;
   height: -moz-max-content;
   height: max-content;
@@ -53,28 +55,44 @@ body {
   }
 }
 #main-page .intro {
-  padding-top: 80px;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 6rem;
   text-align: center;
-  background-color: rgba(0, 255, 255, 0.839);
-  box-shadow: 1px 1px 5px black;
 }
 #main-page .intro h1 {
+  color: #00ffff;
   font-size: 4rem;
   font-weight: bold;
 }
 #main-page .intro p {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
+@media screen and (max-width: 992px) {
+  #main-page .intro h1 {
+    font-size: 3.8rem;
+  }
+  #main-page .intro p {
+    font-size: 1.2rem;
+  }
+}
 .technologies-container {
-  width: 70%;
+  position: absolute;
+  top: 13.5rem;
+  left: 0;
+  right: 0;
+  width: 1000px;
+  background-color: #888;
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
+  box-shadow: 0 0 5px black;
 }
 .technologies-container img {
   width: 68px;
@@ -85,35 +103,72 @@ body {
   transform: scale(110%);
 }
 
+@media screen and (max-width: 992px) {
+  .technologies-container {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 512px) {
+  .technologies-container {
+    width: 400px;
+  }
+}
 .personal-info-container {
-  text-align: center;
+  width: 100%;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.personal-info-container > div {
+  width: 70%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  text-align: start;
   padding: 20px;
 }
-.personal-info-container h2 {
-  color: white;
+.personal-info-container > div h2 {
+  color: #00ffff;
   font-size: 4rem;
   font-weight: bold;
 }
-.personal-info-container p {
+.personal-info-container > div p {
   color: white;
 }
-.personal-info-container a {
+.personal-info-container > div a {
   text-decoration: none;
-  font-size: 1.1rem;
-  background-color: rgba(0, 255, 255, 0.839);
+  font-size: 1.3rem;
+  background-color: #00ffff;
   padding: 10px 20px;
-  border-radius: 35px;
+  border-radius: 30px;
   color: black;
   text-align: center;
-  transition: opacity 0.2s ease-in-out;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
-.personal-info-container a:hover {
-  opacity: 0.8;
-}
-.personal-info-container a img {
-  width: 25px;
+.personal-info-container > div a:hover {
+  background-color: #222;
+  color: white;
 }
 
+@media screen and (max-width: 992px) {
+  .personal-info-container {
+    padding-top: 3rem;
+  }
+  .personal-info-container > div {
+    width: 90%;
+    flex-direction: column;
+  }
+  .personal-info-container > div h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 512px) {
+  .personal-info-container {
+    padding-top: 6rem;
+  }
+}
 .contact-design {
   color: white;
   font-size: 1.2rem;
@@ -128,6 +183,7 @@ body {
   padding: 20px;
 }
 .contact-design h3 {
+  color: #00ffff;
   font-size: 2.5rem;
 }
 .contact-design #contact-options-design {
@@ -154,7 +210,7 @@ body {
 }
 .contact-design #contact-options-design #contact-options .bi::before {
   padding: 10px;
-  color: rgba(0, 255, 255, 0.839);
+  color: #00ffff;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -165,26 +221,32 @@ body {
 #form-container {
   width: 100%;
 }
-#form-container form input {
+#form-container form input,
+#form-container #note {
+  color: white;
   width: 100%;
-  border: 2px solid #18c9e8;
+  background-color: rgba(17, 17, 17, 0.4666666667);
+  border: 1px solid #00ffff;
   border-radius: 5px;
   padding: 5px;
+  resize: none;
 }
-#form-container form input:focus {
+#form-container form input:focus,
+#form-container #note:focus {
   outline: none;
 }
 #form-container #send {
+  color: black;
   width: 30%;
   border: none;
   margin-top: 10px;
   border-radius: 5px;
   background-color: #18c9e8;
-  opacity: 0.7;
+  opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }
 #form-container #send:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 footer .copyright {
@@ -223,11 +285,10 @@ footer .copyright {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #111;
   padding: 20px;
 }
 .container-design h3 {
-  color: white;
+  color: #00ffff;
   font-size: 4rem;
   font-weight: 700;
   display: inline;
@@ -273,36 +334,45 @@ footer .copyright {
   background-color: #18c9e8;
 }
 
-.intro {
-  padding: 20px;
-}
-
-.img-container-design {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: stretch;
-  gap: 30px;
-  padding: 30px;
-}
-.img-container-design a {
-  background-color: rgba(0, 255, 255, 0.839);
-  text-align: center;
-  transition: opacity 0.1s ease-in-out;
-  border-radius: 20px;
-}
-.img-container-design a:hover {
-  opacity: 0.8;
-}
-.img-container-design a img {
+.project-container {
   width: 100%;
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12rem;
 }
-.img-container-design .download-button {
+.project-container .project-info {
+  border: 1px solid #000;
+}
+.project-container .project-info h1 {
+  color: #00ffff;
+  font-size: 4rem;
+}
+.project-container .project-info p {
+  font-size: 1.2rem;
+  color: white;
+}
+.project-container .project-info .download-button {
   text-decoration: none;
   color: #1f1f1f;
   font-size: 1.2rem;
   padding: 5px 0;
   border-radius: 5px;
+  background-color: #00ffff;
+  text-align: center;
+  transition: opacity 0.1s ease-in-out;
+  border-radius: 20px;
+}
+
+.project-link {
+  width: 800px;
+  height: 450px;
+  background-image: url(../Images/coffeeth.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.technologies-container-projects {
+  top: 6rem;
+  justify-content: space-evenly;
 }/*# sourceMappingURL=main.css.map */

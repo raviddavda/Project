@@ -65,7 +65,10 @@ const randomizeBoardArr = () => {
 
 const cardClickHandle = () => {
   for (let box of boxes) {
-    box.addEventListener('click', () => {
+    box.addEventListener('click', function cardClick() {
+      if (counter === 2) {
+        return;
+      }
       box.classList.toggle('active');
       clickedBoxes.push(box);
       counter++;
@@ -82,6 +85,7 @@ const cardClickHandle = () => {
           clickedBoxes = [];
         }, 1000);
       }
+
     });
   }
 };
@@ -114,6 +118,6 @@ const isEndGame = () => {
 
 window.addEventListener('load', () => {
   cardClickHandle();
-  // randomizeBoardArr();
+  randomizeBoardArr();
   document.querySelector('#resetBtn').addEventListener('click', resetBoard);
 });

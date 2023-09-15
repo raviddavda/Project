@@ -1,6 +1,7 @@
-$mainColor: rgba(0, 255, 255, 0.839);
+$mainColor: #00ffff;
 $l-mobile: 1600px;
 $s-mobile: 992px;
+$xs-mobile: 512px;
 
 * {
   margin: 0;
@@ -12,7 +13,8 @@ body {
   position: relative;
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  background-color: #111;
+  background: rgb(48, 48, 48);
+  background: radial-gradient(circle, rgba(48, 48, 48, 1) 0%, rgba(17, 17, 17, 1) 100%);
 }
 
 #border {
@@ -35,11 +37,17 @@ body {
   }
 }
 
+@mixin xs-mobile {
+  @media screen and (max-width: $xs-mobile) {
+    @content;
+  }
+}
+
 @import "header";
 
 @import "intro";
 
-@import "projects";
+@import "technologies";
 
 @import "info";
 

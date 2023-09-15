@@ -1,9 +1,21 @@
 .personal-info-container {
-  text-align: center;
+  width: 100%;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.personal-info-container>div {
+  width: 70%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  text-align: start;
   padding: 20px;
 
   h2 {
-    color: white;
+    color: $mainColor;
     font-size: 4rem;
     font-weight: bold;
   }
@@ -14,20 +26,38 @@
 
   a {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     background-color: $mainColor;
     padding: 10px 20px;
-    border-radius: 35px;
+    border-radius: 30px;
     color: black;
     text-align: center;
-    transition: opacity .2s ease-in-out;
+    transition: background-color .15s ease-in-out, color .15s ease-in-out;
 
     &:hover {
-      opacity: 0.8;
+      background-color: #222;
+      color: white;
     }
+  }
+}
 
-    img {
-      width: 25px;
+@include s-mobile {
+  .personal-info-container {
+    padding-top: 3rem;
+  }
+
+  .personal-info-container>div {
+    width: 90%;
+    flex-direction: column;
+
+    h2 {
+      font-size: 3rem;
     }
+  }
+}
+
+@include xs-mobile {
+  .personal-info-container {
+    padding-top: 6rem;
   }
 }

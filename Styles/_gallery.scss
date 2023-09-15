@@ -5,11 +5,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #111;
   padding: 20px;
 
   h3 {
-    color: white;
+    color: $mainColor;
     font-size: 4rem;
     font-weight: 700;
     display: inline;
