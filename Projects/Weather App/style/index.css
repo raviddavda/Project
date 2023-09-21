@@ -18,12 +18,14 @@ body {
 }
 
 main {
+  color: #e5e5e5;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 5%;
 }
 
 .shadow {
@@ -33,8 +35,8 @@ main {
 
 .weatherContainer {
   font-size: 1.2rem;
-  color: white;
-  backdrop-filter: blur(20px);
+  color: #e5e5e5;
+  backdrop-filter: blur(50px);
   text-align: center;
   width: 220px;
   height: 300px;

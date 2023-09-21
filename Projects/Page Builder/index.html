@@ -16,6 +16,7 @@
     </div>
     <div id="pageInp">
       <form>
+        <h2>Page Elements:</h2>
         <div id="inputTagContainer">
           <label for="inputTag">HTML Tag:</label>
           <select name="inputTag" id="inputTag">
@@ -35,7 +36,7 @@
         </div>
         <div>
           <label for="inputContent">Content:</label>
-          <input type="text" id="inputContent" required>
+          <input type="text" id="inputContent">
         </div>
         <div>
           <label for="inputColor">Text Color:</label>
@@ -50,15 +51,15 @@
             <option value="rem">REM 'rem'</option>
           </select>
         </div>
-        <div>
+        <div class="checkbox-container">
           <label for="">Align Text to center</label>
-          <input type="checkbox" name="textAlign" id="textAlign">
+          <input type="checkbox" id="textAlign">
         </div>
         <div class="input-buttons-container">
           <button id="submitBtn">Add</button>
-          <button id="divideBtn">Divider</button>
           <button id="undoBtn">Undo</button>
           <button id="saveBtn">Save</button>
+          <button id="loadBtn">Load</button>
           <button id="resetBtn">Reset</button>
         </div>
       </form>

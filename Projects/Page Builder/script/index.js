@@ -5,6 +5,11 @@ const createElm = (tagName, content, color, fontSize, fontSizeOption, width, hei
   if (!tagName) {
     return;
   } else if (!content) {
+    let inputContent = document.querySelector('#inputContent');
+    inputContent.classList.add('required');
+    setTimeout(() => {
+      inputContent.classList.remove('required');
+    }, 2000);
     return;
   } else {
     const newElm = document.createElement(tagName);
@@ -14,14 +19,18 @@ const createElm = (tagName, content, color, fontSize, fontSizeOption, width, hei
     newElm.style.fontSize = fontSize + fontSizeOption;
     newElm.style.width = width + 'px';
     newElm.style.height = height + 'px';
-    newElm.style.textAlign = textAlign;
+    if (textAlign === true) {
+      newElm.style.textAlign = 'center';
+      textAlign = 'center';
+    }
     elmsArr.push({
       tagName,
       content,
       color,
       fontSize,
       width,
-      height
+      height,
+      textAlign,
     })
   }
 };
@@ -50,22 +59,17 @@ const restorePage = () => {
 };
 
 const removeElm = () => {
-  document.querySelector('#undoBtn').addEventListener('click', () => {
+  if (pageDiv.childNodes.length >= 1) {
     pageDiv.lastChild.remove();
     elmsArr.pop();
-  });
+  } else {
+    return;
+  }
 };
 
 const clearPage = () => {
   let pageDiv = document.querySelector('#pageDiv');
   pageDiv.innerHTML = '';
-};
-
-const divider = () => {
-  document.querySelector('#divideBtn').addEventListener('click', () => {
-    const hr = document.createElement('hr');
-    pageDiv.appendChild(hr);
-  });
 };
 
 window.addEventListener("load", () => {
@@ -89,7 +93,7 @@ window.addEventListener("load", () => {
       inputSizeOption.value,
       inputWidth.value,
       inputHeight.value,
-      textAlign.value,
+      textAlign.checked,
     );
   });
   document.getElementById('saveBtn').addEventListener('click', () => {
@@ -98,8 +102,11 @@ window.addEventListener("load", () => {
   });
   document.querySelector('#resetBtn').addEventListener('click', () => {
     clearPage();
+  });
+  document.querySelector('#undoBtn').addEventListener('click', () => {
+    removeElm();
+  });
+  document.querySelector('#loadBtn').addEventListener('click', () => {
     restorePage();
   });
-  removeElm();
-  divider();
 });

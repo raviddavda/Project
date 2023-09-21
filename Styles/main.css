@@ -135,13 +135,14 @@ body {
   font-weight: bold;
 }
 .personal-info-container > div p {
+  font-size: 1.4rem;
   color: white;
 }
 .personal-info-container > div a {
   text-decoration: none;
   font-size: 1.3rem;
   background-color: #00ffff;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 30px;
   color: black;
   text-align: center;
@@ -335,21 +336,30 @@ footer .copyright {
 }
 
 .project-container {
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+  gap: 10rem;
   padding-top: 12rem;
+  padding-bottom: 5rem;
+  border: 1px solid #000;
 }
 .project-container .project-info {
-  border: 1px solid #000;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
 }
 .project-container .project-info h1 {
   color: #00ffff;
   font-size: 4rem;
 }
 .project-container .project-info p {
-  font-size: 1.2rem;
+  text-align: start;
+  font-size: 1.4rem;
   color: white;
 }
 .project-container .project-info .download-button {
@@ -362,17 +372,36 @@ footer .copyright {
   text-align: center;
   transition: opacity 0.1s ease-in-out;
   border-radius: 20px;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.project-container .project-info .download-button:hover {
+  background-color: #717171;
+  color: white;
 }
 
 .project-link {
-  width: 800px;
-  height: 450px;
-  background-image: url(../Images/coffeeth.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-link img {
+  width: 100%;
+  box-shadow: 0 0 10px black;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.15s ease-in-out;
+}
+.project-link img:hover {
+  transform: scale(101%);
+  box-shadow: 0 0 30px black;
 }
 
 .technologies-container-projects {
-  top: 6rem;
+  top: 4.5rem;
   justify-content: space-evenly;
+}
+
+footer .copyright-project {
+  position: fixed;
+  bottom: -15px;
 }/*# sourceMappingURL=main.css.map */

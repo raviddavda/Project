@@ -19,11 +19,11 @@
       </div>
       <div>
         <label for="item">Item Name:</label>
-        <input type="text" name="item" id="listItem">
+        <input type="text" name="item" id="listItem" required>
       </div>
       <div>
         <label for="price">Price:</label>
-        <input type="number" name="price" id="price" step=".01" placeholder="₪">
+        <input type="number" name="price" id="price" step=".01" placeholder="₪" required>
       </div>
       <button id="addBtn">Add</button>
     </form>
@@ -33,7 +33,7 @@
     </div>
     <div id="cartInfo">
       <button id="resetCartBtn">Reset Cart</button>
-      <p class="totalCost">Total Cost: 0₪</p>
+      <p class="totalCost">Total Cost: 0.00₪</p>
     </div>
   </div>
 
