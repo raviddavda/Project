@@ -387,13 +387,12 @@ footer .copyright {
 }
 .project-link img {
   width: 100%;
-  box-shadow: 0 0 10px black;
   border-radius: 15px;
-  transition: box-shadow 0.3s ease-in-out, transform 0.15s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, transform 0.2s ease-in-out;
 }
 .project-link img:hover {
   transform: scale(101%);
-  box-shadow: 0 0 30px black;
+  box-shadow: 0 0 15px white;
 }
 
 .technologies-container-projects {

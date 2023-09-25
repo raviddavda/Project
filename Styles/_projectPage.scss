@@ -55,13 +55,12 @@
 
   img {
     width: 100%;
-    box-shadow: 0 0 10px black;
     border-radius: 15px;
-    transition: box-shadow .3s ease-in-out, transform .15s ease-in-out;
+    transition: box-shadow .4s ease-in-out, transform .2s ease-in-out;
 
     &:hover {
       transform: scale(101%);
-      box-shadow: 0 0 30px black;
+      box-shadow: 0 0 15px white;
     }
   }
 }

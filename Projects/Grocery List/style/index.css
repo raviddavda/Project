@@ -1,5 +1,5 @@
 body {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: 'Merienda', cursive;
+  font-weight: 700;
 }
 
 .container {
@@ -77,14 +78,15 @@ input::-webkit-inner-spin-button {
 #cart>button {
   padding: 6px 20px;
   border: 1px solid #0D1282;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #EEEDED;
   color: #0D1282;
   font-size: 1.1rem;
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-#cart>button:hover {
+#cart>button:hover,
+#cartInfo #loadCartBtn:hover {
   background-color: #0D1282;
   color: #EEEDED;
   cursor: pointer;
@@ -101,7 +103,7 @@ ul>li {
   border-bottom: 2px solid #888;
   display: grid;
   padding: 5px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   list-style: none;
   animation: drop .3s ease-in;
   transition: all .1s ease-in-out;
@@ -135,27 +137,36 @@ ul>li:hover {
   width: 100%;
   display: flex;
   align-items: center;
+  gap: 1%;
 }
 
-#cartInfo>button {
-  width: 40%;
+#cartInfo #resetCartBtn,
+#cartInfo #loadCartBtn,
+.itemRemove {
+  width: 45%;
   padding: 6px 20px;
-  border: 1px solid #D71313;
-  border-radius: 5px;
+  border: 1px solid #0D1282;
+  border-radius: 10px;
   background-color: #EEEDED;
-  color: #D71313;
   font-size: 1.1rem;
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-#cartInfo>button:hover {
+#cartInfo #resetCartBtn:hover,
+.itemRemove:hover {
   background-color: #D71313;
   color: #EEEDED;
   cursor: pointer;
 }
 
+.itemRemove {
+  width: max-content;
+  margin-left: 50%;
+  padding: 5px 10px;
+}
+
 .totalCost {
-  width: 100%;
+  width: 55%;
   padding-right: 25px;
   text-align: end;
 }
@@ -184,5 +195,15 @@ ul>li:hover {
   .container {
     margin-top: 80px;
     width: 98%;
+  }
+
+  #cartInfo {
+    flex-direction: column-reverse;
+  }
+
+  #cartInfo #resetCartBtn,
+  #cartInfo #loadCartBtn,
+  .totalCost {
+    width: 100%;
   }
 }
