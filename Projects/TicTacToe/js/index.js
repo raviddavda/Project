@@ -10,6 +10,11 @@ let score = {
 
 document.querySelector('#resetScoreBtn').addEventListener('click', () => {
   document.querySelector('p').innerHTML = 'X: 0, O: 0, Ties: 0';
+  score = {
+    X: 0,
+    O: 0,
+    ties: 0
+  };
 });
 
 
@@ -80,8 +85,6 @@ const isEndGame = () => {
   }
 };
 
-
-
 const updateScore = () => {
   document.querySelector('p').
     innerHTML = `X: ${score.X}, O: ${score.O}, Ties: ${score.ties}`;
@@ -103,9 +106,7 @@ const handleClickXO = (myE) => {
 
   whoPlayNow == 'x' ? (whoPlayNow = 'o') : (whoPlayNow = 'x');
   if (whoPlayNow == 'x') {
-    console.log('x plays now');
   } else {
-    console.log('o plays now');
     againstComputer();
   }
 };

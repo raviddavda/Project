@@ -13,9 +13,7 @@ const againstComputer = () => {
       againstComputer()
       return;
     } else {
-      console.log(i);
       cells[i].click();
-      console.log('computer click');
       return;
     }
   }
